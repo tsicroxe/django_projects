@@ -1,0 +1,36 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+p{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.box{
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  border: 1px solid black;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+input{
+  margin-top: 30px;
+}
+#activities_log{
+  margin-left: 20px;
+  width: 880px;
+  resize: none;
+  height: 200px;
+  border: 1px solid black;
+  overflow: scroll;
+}
