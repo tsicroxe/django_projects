@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <title>{{request.session.first_name}}'s Wall'</title>
+  </head>
+  <body>
+
+    <form action='/post_message' method="POST">
+      {% csrf_token %}
+      <h2>Post a message</p>
+      <input type="textarea" name='message'/>
+      <input type="submit" value="Post Message" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+    <h1>Welcome, {{request.session.alias}}</h1>
+    <a href="{% url 'belt:add' %}">Add Book and Review</a>
+    <a href="{% url 'belt:logout' %}">logout</a>
+
+    <div id='recent'>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{request.session.first_name}}'s Hub</title>
+  </head>
+  <body>
+    <h1>Welcome back, {{request.session.first_name}}</h1>
+    <form action="{% url 'disappearing_ninja:index' %} ">
+      <input type='submit' value="Go to Disappearing Ninja Now!" />
+    </form>
+    <form action="{% url 'ninja_gold:index' %} ">
+      <input type='submit' value="Go to Ninja Gold Now!" />
+    </form>
+    <form action="{% url 'courses:index' %} ">
+      <input type='submit' value="Add a Course" />
+    </form>
+    <form action="{% url 'login_registration:reset' %} ">
+      <input type='submit' value="Log off" />
+    </form>
+  </body>
+</html>

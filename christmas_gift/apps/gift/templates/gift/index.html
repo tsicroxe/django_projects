@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Merry Christmas</title>
+    {% load staticfiles %}
+
+	  <style>
+			body {
+				background-color:black;
+				font-family: monospace;
+				font-size:50px;
+				text-align: center;
+				margin-top:20%;
+			}
+
+			h1{
+				color:white;
+				border-right: 1px solid #777;
+				padding-right: 7px;
+			}
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script>
+
+		var el = document.getElementById('code'),
+		pw_counter = 0;
+
+		var something = function(event){
+			this.password = [38];
+
+			this.onclick1 = function(event){
+				console.log(this.password);
+			}
+
+		}
+
+
+		var s = new something(document.body);
+		$('document').ready(function(){
+			$( 'body' ).keypress(function() {
+				console.log( "Handler for .keypress() called." );
+			});
+		});
+		</script>
+	</head>
+
+<body>
+
+	<h1>Enter the Code:</h1>
+	<div id='code'>
+		' '
+	</div>
+
+</body>
+</html>

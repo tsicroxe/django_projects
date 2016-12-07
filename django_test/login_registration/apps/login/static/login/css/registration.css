@@ -1,0 +1,17 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+form{
+  border: 1px solid black;
+  width: 500px;
+
+}
+
+input{
+  width: 150px;
+  margin-left: 10px;
+  display: block;
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'products/edit_styles.css' %}">
+  </head>
+  </head>
+  <body>
+    <h1>Product {{product.id}}</h1>
+
+    <form action="{% url 'products:update' product.id %}" method='POST'>
+      {% csrf_token %}
+      <label for="name">Name: </label>
+      <input type='text' name="name" value='{{product.name}}' />
+      <label for="description">Description: </label>
+      <input type='text' name="description" value='{{product.description}}' />
+      <label for="price">Price: </label>
+      <input type='text' name="price" value='{{product.price}}' />
+      <input type='submit' value='Update' />
+    </form>
+    <a href="{% url 'products:show' product.id %}">Show</a>
+    <a href="{% url 'products:index' %}">Back</a>
+  </body>
+</html>

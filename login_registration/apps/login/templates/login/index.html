@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'login/css/index.css' %}" title="index_page" charset="utf-8">
+  </head>
+  <body>
+    <div id="login">
+      <form action="/login" method="POST">
+        {% csrf_token %}
+        <label for="email">Email: </label>
+        <input type="text" name='email'/>
+        <label for="password">Password: </label>
+        <input type="password" name='password'/>
+        <input type="submit" value="Login" />
+      </form>
+      {% if messages  %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <a href="/register">Register</a>
+  </body>
+</html>

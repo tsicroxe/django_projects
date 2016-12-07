@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Travels</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'main/travels_styles.css' %}">
+  </head>
+  <body>
+    <a href="{% url 'main:logout' %}">logout</a>
+    <h1>Hello, {{request.session.name}}</h1>
+    <table>
+      <h2>Your Trip Schedules</h2>
+      <thead>
+        <th>Destination</th>
+        <th>Travel Start Date</th>
+        <th>Travel End Date</th>
+        <th>Plan</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{travel.destination}}</td>
+          <td>{{travel.start_date}}</td>
+          <td>{{travel.end_date}}</td>
+          <td>{{travel.plan}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

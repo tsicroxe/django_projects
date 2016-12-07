@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey Results</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'survey/css/result.css' %}" title="index_page" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Submitted Info</h1>
+
+      <div id="name">
+        <p>Name:</p>
+        <p>{{request.session.name}}</p>
+      </div>
+
+      <div id="location">
+          <p>Location:</p>
+          <p>{{request.session.location}}</p>
+      </div>
+
+      <div id="language">
+        <p>Favorite Language:</p>
+        <p>{{request.session.language}}</p>
+      </div>
+
+      <div id="comment">
+        <p>Comment:</p>
+        <p>{{request.session.comment}}</p>
+      </div>
+
+    </div>
+  </body>
+
+</html>

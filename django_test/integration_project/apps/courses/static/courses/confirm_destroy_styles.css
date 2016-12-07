@@ -1,0 +1,32 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  margin: 0 auto;
+  align: center;
+}
+form{
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+button{
+  margin-top: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+.red{
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+  height: 25px;
+}
+#container{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
+  background-color: grey;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'courses/index_styles.css' %}">
+  </head>
+  <body>
+
+    <h1>Add a new course</h1>
+
+    <!-- Add a new course FORM -->
+    <form action="{% url 'courses:create' %}" method="POST">
+      {% csrf_token %}
+      <label for="course">Course Name: </label>
+      <input type="text" name="name" />
+      <label for="description">Description: </label>
+      <input type="textarea" name="description" />
+      <input type="submit" value="Add" />
+    </form>
+
+    <!-- Courses TABLE -->
+    <table>
+      <thead>
+        <th>Course name</th>
+        <th>Description</th>
+        <th>Date Added</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        {% for course in courses %}
+          <tr>
+            <td>{{course.course}}</td>
+            <td>{{course.description}}</td>
+            <td>{{course.created_at}}</td>
+            <td><a href="/courses/{{course.id}}/destroy">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <form action="{% url 'courses:courses_users' %}" method='GET'>
+      {% csrf_token %}
+      <input type="submit" class='red' value="Courses/Users">
+
+    <form action="{% url 'login_registration:hub' %}" method='POST'>
+      {% csrf_token %}
+      <input type="submit" class='red' value="Return to Hub">
+    </form>
+
+  </body>
+</html>

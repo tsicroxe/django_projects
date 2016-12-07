@@ -1,0 +1,40 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#container{
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 98%;
+  background-color: grey;
+  height: 100%;
+}
+h1{
+  color: blue;
+  display: inline-block;
+  vertical-align: top;
+}
+#header{
+  vertical-align: top;
+  display: inline-block;
+  background-color: green;
+  height: 220px;
+  width: 100%;
+  border-bottom: solid 2px purple;
+  /*background-image: url("/static/giggles/images/helping_children_grow.jpg");*/
+  /*background-size: 100%;*/
+  /*background-color: blue;*/
+}
+#sidebar{
+  width: 300px;
+  height: 1000px;
+  background-color: red;
+  display: block;
+}
+#main_content{
+  display: inline-block;
+  vertical-align: top;
+}
+img{
+  display: inline-block;
+}

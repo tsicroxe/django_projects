@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TMNT</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+      <img src="{% static 'ninja/images/'|add:ninja|add:'.jpg' %}" />
+      <form action="{% url 'login_registration:hub' %}" method='POST'>
+        {% csrf_token %}
+        <input type="submit" class='red' value="Return to Hub">
+      </form>
+  </body>
+</html>

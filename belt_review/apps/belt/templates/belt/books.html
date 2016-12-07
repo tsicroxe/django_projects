@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+    <h1>Welcome, {{request.session.alias}}</h1>
+    {% for book in latest_books %}
+      <h2>Title: {{book.title}}</h2>
+      <h3>Rating:
+        {{book.rating}}
+      {% if book.rating == '1' %}
+        *
+      {% elif book.rating == '2' %}
+        **
+      {% elif book.rating == '3' %}
+        ***
+      {% elif book.rating == '4' %}
+        ****
+      {% elif book.rating == '5' %}
+        *****
+      </h3>
+      {% endif %}
+      <p>Posted by: {{book.users.alias}}</p>
+      <p>Posted on: {{book.created_at}}</p>
+    {% endfor %}
+    <a href="{% url 'belt:add' %}">Add Book and Review</a>
+    <a href="{% url 'belt:logout' %}">logout</a>
+
+    <div id='recent'>
+
+    </div>
+  </body>
+</html>
